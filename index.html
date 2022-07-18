@@ -26,7 +26,7 @@
         const text = form[0].value;
         ws.send(text)
         const li = document.createElement('li');
-        li.textContent = 'You: ' + text;
+        li.textContent = 'You😍: ' + text;
         ul.appendChild(li)
         form[0].value= ''
     })
@@ -36,7 +36,7 @@
     
      ws.addEventListener('message', (e) =>{
         const li = document.createElement('li');
-        li.textContent = 'Annonymous: ' +  e.data;
+        li.textContent = 'Annonymous 😒: ' +  e.data;
         ul.appendChild(li)
      })
     
