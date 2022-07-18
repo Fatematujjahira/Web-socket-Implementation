@@ -1,12 +1,7 @@
 .main{
-    max-width: 450px !important;
-    /* width: 100; */
-    margin: 50px auto;
-    border-radius: 10px;
-    border: 2px solid rgb(102, 177, 247);
-    box-shadow: 1px 1px 6px 7px #b4d6ee;
-    padding: 60px 40px;
-    background-color: rgba(106, 176, 241, 0.425);
+    background-image: url("./image/istockphoto-1146368775-1024x1024.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 
 }
 .title{
