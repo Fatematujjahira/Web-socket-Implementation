@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>We are learning web socket</h1>
+       <ul id="ul"></ul>
+    <form action="" id="form">
+        <input type="text" >
+        <button type="submit">send</button>
+    </form>
+</body>
+<script>
+     const ul = document.getElementById('ul');
+    const ws = new  WebSocket('ws://localhost:3030')
+
+
+    ws.addEventListener ("open" ,function() {
+    const form = document.getElementById("form");
+
+    form.addEventListener('submit', (e)=>{
+        e.preventDefault()
+        const text = form[0].value;
+        ws.send(text)
+        const li = document.createElement('li');
+        li.textContent = 'You: ' + text;
+        ul.appendChild(li)
+        form[0].value= ''
+    })
+    
+    })
+
+    
+     ws.addEventListener('message', (e) =>{
+        const li = document.createElement('li');
+        li.textContent = 'Annonymous: ' +  e.data;
+        ul.appendChild(li)
+     })
+    
+</script>
+</html>
