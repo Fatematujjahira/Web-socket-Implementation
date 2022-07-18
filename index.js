@@ -34,6 +34,6 @@ wss.on('connection', (socket) =>{
     })
 })
 
-expressHttpServer.listen(process.env.PORT ||3030,() =>{
+expressHttpServer.listen(process.env.PORT || 3030,() =>{
     console.log('server is running......');
 })
